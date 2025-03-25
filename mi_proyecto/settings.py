@@ -32,9 +32,7 @@ SECRET_KEY = 'django-insecure-e_^$^f%me&k%&3=ko)2#3x8(i@f7z8jgax&!gnt3pen^zjb0%*
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    "formulario-de-prueba-dbh8abdsgzdcf3gc.canadacentral-01.azurewebsites.net",
-    "127.0.0.1",
-    "localhost"
+    "*"
 ]
 
 
