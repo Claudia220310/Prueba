@@ -1,5 +1,7 @@
 from django.shortcuts import render, redirect
 from .forms import UsuarioForm
+from .models import Usuario
+
 
 def registro(request):
     if request.method == "POST":
@@ -13,3 +15,9 @@ def registro(request):
 
 def registro_exitoso(request):
     return render(request, 'registro_exitoso.html')
+
+
+
+def info_view(request):
+    usuarios = Usuario.objects.all()  # Obtiene todos los usuarios registrados
+    return render(request, 'info.html', {'usuarios': usuarios})
