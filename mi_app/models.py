@@ -10,3 +10,14 @@ class Usuario(models.Model):
 
     def __str__(self):
         return self.nombre
+
+
+
+class Gif(models.Model):
+    nombre = models.CharField(max_length=255, help_text="Nombre identificador del GIF")
+    imagen = models.ImageField(upload_to='gifs/', help_text="Archivo GIF")
+    activo = models.BooleanField(default=True, help_text="Indica si el GIF se usa actualmente en los estilos")
+
+    def __str__(self):
+        return self.nombre
+
